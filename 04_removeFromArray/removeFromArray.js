@@ -1,11 +1,10 @@
 const removeFromArray = function(arrValues, ...values) {
     return arrValues.filter((value) => {
-        for (const val of values) {
-            if (value === val) {
-                return false;
-            }
+        if (values.includes(value)) {
+            return false;
+        } else {
+            return true;
         }
-        return true;
     })
 };
 
